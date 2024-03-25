@@ -10,8 +10,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "t_orders")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
@@ -21,4 +19,19 @@ public class Order {
     private String orderNumber;
     @OneToMany(cascade = CascadeType.ALL)
     private List<OrderLineItems> orderLineItemsList;
+    
+	public String getOrderNumber() {
+		return orderNumber;
+	}
+	public void setOrderNumber(String orderNumber) {
+		this.orderNumber = orderNumber;
+	}
+	public List<OrderLineItems> getOrderLineItemsList() {
+		return orderLineItemsList;
+	}
+	public void setOrderLineItemsList(List<OrderLineItems> orderLineItemsList) {
+		this.orderLineItemsList = orderLineItemsList;
+	}
+    
+    
 }

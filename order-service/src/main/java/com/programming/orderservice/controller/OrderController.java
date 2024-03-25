@@ -3,6 +3,8 @@ package com.programming.orderservice.controller;
 import com.programming.orderservice.dto.OrderRequest;
 import com.programming.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final OrderService orderService;
+	@Autowired
+    private OrderService orderService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
