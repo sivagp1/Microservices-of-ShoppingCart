@@ -53,11 +53,11 @@ class ProductServiceApplicationTests {
     }
 
     private ProductRequest getProductRequest() {
-        return ProductRequest.builder()
-                .name("iPhone 13")
-                .description("iPhone 13")
-                .price(BigDecimal.valueOf(1200))
-                .build();
+    	ProductRequest prodReq = new ProductRequest();
+    	prodReq.setName("iPhone 13");
+    	prodReq.setDescription("iPhone 13");
+    	prodReq.setPrice(BigDecimal.valueOf(1200));
+    	return prodReq;
     }
 
 }
